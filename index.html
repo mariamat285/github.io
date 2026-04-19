@@ -5,73 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <h1>Ma présentation</h1>
+        Mon site personnel
     </title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
     <header>
-        <img src="logo_URDFS.png" alt="">
+        <img id="logo" src="Mon logo.png" alt="" >
+        <div class="button"><span></span></div>
+         <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="profile.html" class="">Profile</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="inscription.html">S'inscrire</a></li>
+                <li><a href="connexion.html">Se connecter</a></li>
+            </ul>
+        </nav>
     </header>
-    <!--<nav> sert à créer une “liste” de liens pour aller vers d’autres pages ou sections du site.-->
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="profile.html" class="">Profile</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-            <li><a target="_blank" title="Lien vers le site de l'Université Rose Dieng" href="https://www.urdfs.sn">Site URDFS</a></li>
-        </ul>
-    </nav>
-    <!--L'attribut target permet d'ouvrir un liens de votre page dans un autre onglet-->
-    <!--L'attribut title permet d'afficher une description quand tu mets le curseur sur le lien -->
-        <h1 class="titredepage">Ma présentation</h1>
+    <script>
+        var button = document.querySelector('.button')
+        var menu = document.querySelector('.menu')
+
+        button.onclick = function(){
+            button.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+
+
+    <h1 class="titredepage">Ma présentation</h1>
+
         <div id="bloc1">
             <p id="presentation">Bonjour, je m'appelle Mariama Thiam.<br> J'ai presque 20 ans. 
                 Je suis étudiante en première année de licence en data science et intelligence artificielle.<br>
-                Je fais partie d'une très grande famille.<br>
-                J'ai deux frères, dont un jumeau, et une sœur.<br>
-                Pendant mon temps libre, j'aime bien regarder des séries, surtout des séries de type policier, enquête ou médicales.<br>
                 Je ne sais pas encore dans quel domaine précis je veux travailler, mais j'aime beaucoup l'informatique, même si ce n'est pas toujours évident.
             </p>
-            <img id="profile" src="profile.png" alt="photo de profile">
+            <img id="profile" src="ma photo de profile.jpeg" alt="ma photo de profile">
         </div>
-    <a href="#InfosEtudiante">"#Info Etudiante"</a>
-    <!--ul = “Unordered List”, permet de créer une liste sans ordre précis-->
-    <h1>Liste des matieres en LDIA au semestre 1 </h1>
-    <ul type ="square">    
-        <li>Architécture des ordinateurs</li>
-        <li>Algorithme</li>
-        <li>Systéme de gestion de base de données</li>
-        <li>Anglais</li>
-        <li>Developpement Web</li>
-    </ul>
-<!--ol = “Ordered List”, permet de créer une liste ordonnée-->
-<!--<ol type ="1"> par défaut permet de demarer la liste
-<ol type ="1" start ="5">start permet de dire là cela commence mais cela ne marche qu'avec les chiffres
-<li value = "8">Algorithme</li> le value permet de dire exactement le numero qu'on veut mettre
--->
-<h1>Matieres favories </h1>
-<ol type ="1" start ="5"> 
-    <li>Anglais</li>
-    <li value = "8">Algorithme</li>
-    <li>Developpement Web</li>
-</ol>
-<!--dl signifie Definition List
- C’est le conteneur qui contient toute la liste de définitions.-->
-<!--<dt> signifie Definition Term
- C’est le terme ou le mot à définir.-->
-<!--<dd> signifie Definition Description
- C’est la définition ou la description ou la donnée rék du terme-->
-<h3 id="InfosEtudiante">Information étudiante</h3>
-<dl>
-    <dt>Nom : </dt><dd>Thiam </dd>
-    <dt>Prénom : </dt><dd>Mariama </dd>
-    <dt>Numéro : </dt><dd>142536 </dd>
-    <dt>Filière: </dt><dd>LDIA </dd>
-</dl>
-<!--<a> signifie anchor (ancre en anglais)
-Elle sert à rediriger l’utilisateur vers une autre page ou une section de la même page.-->
-<a href="profile.html">Voir détail</a>
+
+        <h1 class="titredepage">Mes objectifs</h1>
+        
+        <section id="objectifs">
+
+            <p>
+                Mon objectif principal est de devenir une experte dans le domaine de l’informatique. 
+                Je souhaite acquérir de solides compétences dans des domaines tels que la data science, l’intelligence artificielle et le développement de solutions numériques.
+            </p>
+
+            <p>
+                Je veux évoluer progressivement vers un niveau d’excellence dans mon domaine, en développant mes compétences techniques et ma capacité à résoudre des problèmes complexes.
+            </p>
+
+            <p>
+                Sur le plan personnel, je souhaite gagner en confiance, devenir autonome et la meilleure version de moi-même.
+                Mon ambition est d’avoir un impact positif sur la société grâce à la technologie et à l’innovation.
+            </p>
+        </section>
+        <p>
+            Pour plus de détail, je vous invite à visiter ma page <a href="profile.html">Mon profil</a>
+        </p>
+        <p>
+            MERCI!!
+        </p>
 </body>
 </html>
